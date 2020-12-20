@@ -9,7 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start":"node epsile-server.js",
+    "start":"node epsile-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

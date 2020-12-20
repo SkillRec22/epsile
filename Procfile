@@ -1,1 +1,1 @@
-web: node epsile-server.js
+web: node epsile-server
