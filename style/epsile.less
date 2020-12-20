@@ -1,0 +1,355 @@
+// LESS stylesheet
+
+html, body {
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	background-color: #f4f4f4;
+	color: #f4f4f4;
+	font-size: 14px;
+	font-family: Helvetica, sans-serif;
+	overflow: hidden;
+}
+
+a {
+	color: #edba60;
+	&:hover {
+		color: #edba60;
+	}
+	img {
+		border: none;
+	}
+}
+
+header {
+	background-color: #333;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6b2ba5), to(#9c69cc));
+	background-image: -moz-linear-gradient(top, #f4f4f4, #f4f4f4);
+	background-image: linear-gradient(top, #333, #111);
+	border-bottom: 3px solid #6b2ba5;
+	height: 60px;
+	width: 100%;
+	display: block;
+	position: absolute;
+
+	#logo {
+		width: 183px;
+		height: 79px;
+		position: relative;
+		top: -10px;
+		left: 0px;
+		background-image: url('../img/epsile_text.png');
+	}
+}
+
+
+
+::selection {
+	background: #f4f4f4;
+	color: white;
+}
+::-moz-selection {
+	background: #f4f4f4;
+	color: white;
+}
+::-webkit-scrollbar {
+	width: 18px;
+	height: 18px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: rgba(60, 0, 60, 0.5);
+	border: 1px solid rgba(100, 0, 100, 0.4);
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(60, 0, 60, 1);
+	border: 1px solid rgba(100, 0, 100, 0.8);
+}
+::-webkit-scrollbar-track {
+	background-color: rgba(30, 20, 30, 0.5);
+}
+::-webkit-scrollbar-corner {
+	background-color: rgba(30, 20, 30, 0.7);
+}
+
+
+#container {
+	
+	width: 10%;
+	height: 100%;
+	overflow: hidden;
+}
+#chatWindow {
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: #f4f4f4;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f4f4), to(#f4f4f4));
+	background-image: -moz-linear-gradient(top, #f4f4f4, #f4f4f4);
+	background-image: linear-gradient(top, #f4f4f4, #f4f4f4);
+	overflow: hidden;
+}
+#chatMain {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 80px;
+	overflow-y: scroll;
+	overflow-x: none;
+	border: 5px solid #6b2ba5;
+	
+	
+
+	#chatMainDiv {
+		padding: 3px;
+		padding-bottom: 23px;
+		font-size: 14px;
+		color: #000;
+		letter-spacing: 0.5px;
+		font-weight: bold;
+		
+		& > div {
+			padding: 2px;
+		}
+	}
+}
+
+
+#panelRow {
+	background-color: #6b2ba5;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 80px;
+}
+#disconnectButton {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 112px;
+	padding: auto;
+	margin-left: 10px;
+	background-color: #edba60;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#edba60), to(#edba60));
+	background-image: -moz-linear-gradient(top, #edba60, #edba60);
+	background-image: linear-gradient(top, #edba60,#edba60);
+	border: 1px solid #edba60;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: Arial, sans-serif;
+	color: #fff;
+	letter-spacing: 1px;
+	
+
+	-webkit-border-radius: 15px 15px 15px 15px;
+	-moz-border-radius: 15px 15px 15px 15px;
+	border-radius: 15px 15px 15px 15px;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:active {
+		background-color: #edba60;
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#edba60), to(#edba60));
+		background-image: -moz-linear-gradient(top, #999, #ccc);
+		background-image: linear-gradient(top, #999, #ccc);
+		color: #fff;
+	}
+	&:disabled {
+		background-color: #edba60;
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#edba60), to(#edba60));
+		background-image: -moz-linear-gradient(top, #777, #aaa);
+		background-image: linear-gradient(top, #777, #aaa);
+		color: #fff;
+	}
+}
+#chatAreaWrap {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 112px;
+	padding: 4px;
+	
+
+	#chatArea {
+		margin: 0px;
+		padding: 4px;
+		width: 100%;
+		height: 100%;
+		border: none;
+		resize: none;
+		display: block;
+
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		
+		background-color: #edba60;
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6b2ba5), to(#6b2ba5));
+		background-image: -moz-linear-gradient(top, #333, #222);
+		background-image: linear-gradient(top, #333, #222);
+
+		color: #f4f4f4;
+		font-family: Arial, sans-serif;
+		font-size: 16px;
+		letter-spacing: 1px;
+		font-weight: bold;
+		margin-left: 50px;
+
+		&:disabled {
+			background: #6b2ba5;
+			color: #fff;
+		}
+	}
+}
+
+
+
+
+
+textarea:focus {
+	outline: none;
+}
+#isTypingDiv {
+	position: absolute;
+	bottom: 60px;
+	width: 100%;
+	height: 18px;
+	padding-left: 3px;
+	padding-top: 2px;
+	font-size: 14px;
+	background-color: rgba(16, 0, 16, 0.7);
+	-webkit-transition: bottom .1s ease-in-out;
+	-moz-transition: bottom .1s ease-in-out;
+	transition: bottom .1s ease-in-out;
+}
+
+.strangerChat {
+	color: #6b2ba5; 
+	font-weight: bold;
+	font-size: 18px;
+	padding: 25px 25px;
+}
+.youChat {
+	color: #edba50;
+	font-weight: bold;
+	font-size: 18px;
+	padding: 25px 25px;
+	
+}
+.consoleChat {
+	font-weight: bold;
+	color: #363957;
+	font-size: 18px;
+	padding: 25px 25px;
+}
+
+
+
+
+#peopleOnlineSection {
+	position: absolute;
+	right: 18px;
+	background-color: rgba(16, 0, 16, 0.7);
+	font-size: 14px;
+	padding: 2px;
+	color: #AAA;
+}
+
+//#welcomeScreen {
+//	width: 100%;
+//	height: 100%;
+//	display: block;
+//	background-color: rgb(250, 250, 250);
+//	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(247, 243, 243)), to(rgb(250, 250, 250)));
+//	background-image: -moz-linear-gradient(top, rgb(247, 245, 245), rgb(243, 226, 243));
+//	background-image: linear-gradient(top, rgb(247, 230, 230), rgb(236, 231, 236));
+//}
+
+
+
+#badges {
+	position: relative;
+	display: block;
+
+	& > div {
+		position: absolute;
+		right: 0px;
+	}
+	#sharebuttons {
+		float: right;
+		margin: 5px;
+	}
+}
+
+#startButtonDiv {
+	position: absolute;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	text-shadow: 1px 2px 3px #8f6f37;
+
+	& > div {
+		position: relative;
+		top: 40%;
+	}
+	#description {
+		color: #edba60;
+		font-size: 25px;
+		letter-spacing: 0.5px;
+	}
+
+}
+
+#startButton {
+	font-weight: bold;
+	padding: 15px; 
+	border: 0px solid #6b2ba5;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	margin: 4px;
+	background-color: #6b2ba5;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6b2ba5), to(#6b2ba5));
+	background-image: -moz-linear-gradient(top, #3CF, #09F);
+	background-image: linear-gradient(top, #3CF, #09F);
+	-webkit-box-shadow: 1px 3px 10px #6b2ba5;
+	color: white;
+	font-size: 18px;
+	text-shadow: 0px 0px 5px rgba(0, 128, 255, 0.5);
+	cursor: pointer;
+
+	&:focus {
+		outline: none;
+	}
+	&:hover {
+		background-color: #edba60;
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#edba60), to(#edba60));
+		background-image: -moz-linear-gradient(top, #6CF, #39F);
+		background-image: linear-gradient(top, #6CF, #39F);
+		-webkit-box-shadow: 1px 3px 10px #edba60;
+	}
+	&:active {
+		background-color: white;
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#fff));
+		background-image: -moz-linear-gradient(top, #39F, #0AF);
+		background-image: linear-gradient(top, #39F, #0AF);
+		color: #000;
+	}
+	&:disabled {
+		background-color: #666;
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#666), to(#999));
+		background-image: -moz-linear-gradient(top, #666, #999);
+		background-image: linear-gradient(top, #666, #999);
+		color: #CCC;
+		text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+		border-color: #999;
+		cursor: default;
+	}
+}
+
